@@ -94,10 +94,10 @@ Visit [Google Android Developer webpage](https://developer.android.com/studio) a
 ```
 
 ## SELinux and Permission
-Note that if you just deploy apk to target device directly, this apk will be an untrusted_app permission in Android SELinux policy. Even if you got target device key, and sign to this apk, it still as a platform_app permisstion in Android runtime SELinux policy, although better than untrusted_app but still doesn't works.
+Note that if you just deploy apk to target device directly, this apk will be an untrusted_app permission in Android SELinux policy. Even if you got target device key, and sign to this apk, it still as a platform_app permission in Android runtime SELinux policy, although better than untrusted_app but still doesn't works.
 
 * Quick Solution
-  * Issue command to Diable SELinux:
+  * Issue command to Diable SELinux (Permissive mode):
   ```
   # setenforce 0
   ```
@@ -105,7 +105,7 @@ Note that if you just deploy apk to target device directly, this apk will be an 
 * Best Solution
   * Create fully support policy on Android BSP source code, it's not major topic here, but welcome to discuss with me how to fix SELinux policy issue if you need, my mail is onlywig@gmail.com
 
-And don't forget give read/write permission for gpiochip device nodes if Android OS has no suitable permisstion:
+And don't forget give read/write permission for gpiochip device nodes if Android OS has no avaliable permission:
 ```
 # chmod 666 /dev/gpiochip*
 ```
