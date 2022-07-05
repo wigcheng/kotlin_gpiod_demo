@@ -11,6 +11,7 @@ A gpio control demo using modular libgpiod way which is packaged a JNI library, 
 |NXP i.MX8M-Mini | PICO-IMX8MM| Android 11|&#10004;|
 |Broadcom BCM2711 |Raspberry PI 4B| Android 12 | &#10004;|
 |AllWinner H3|Orange PI PC| Android 12 | &#10004;|
+|Rockchip RK3399|Orange PI 4| Android 12 | &#10004;|
 
 ## Compile APK steps
 
