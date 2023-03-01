@@ -90,7 +90,7 @@ class createDropDownList{
             value = text,
             onValueChange = { newText ->
                 text = newText
-                global_index = text.text.toString().toInt()
+                global_index = text.text.toString().toIntOrNull() ?: 0
             },
             modifier = Modifier.fillMaxWidth().background(Color.White)
         )
